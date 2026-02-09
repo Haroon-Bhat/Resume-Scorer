@@ -1,0 +1,44 @@
+Senior Python Developer
+
+Company: Tech Solutions Inc.
+Location: Remote
+Experience: 5+ years
+
+Job Description:
+We are seeking an experienced Senior Python Developer to join our dynamic team. The ideal candidate will have strong expertise in Python development and modern web technologies.
+
+Required Skills:
+- 5+ years of professional Python development experience
+- Django or Flask web framework
+- RESTful API design and development
+- SQL databases (PostgreSQL, MySQL)
+- Git version control
+- Docker and containerization
+- Unit testing and test-driven development
+- Agile/Scrum methodologies
+
+Preferred Skills:
+- AWS or Azure cloud platforms
+- Kubernetes orchestration
+- React or Angular frontend experience
+- CI/CD pipelines (Jenkins, GitLab CI)
+- Microservices architecture
+- Redis or other caching systems
+- GraphQL
+- MongoDB or other NoSQL databases
+
+Responsibilities:
+- Design and develop scalable Python applications
+- Build and maintain RESTful APIs
+- Write clean, maintainable, and well-documented code
+- Collaborate with cross-functional teams
+- Mentor junior developers
+- Participate in code reviews
+- Troubleshoot and debug production issues
+
+Qualifications:
+- Bachelor's degree in Computer Science or related field
+- Minimum 5 years of Python development experience
+- Strong problem-solving and analytical skills
+- Excellent communication skills
+- Experience with modern development practices
