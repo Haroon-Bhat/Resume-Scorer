@@ -243,8 +243,8 @@ def main():
     """Main Streamlit application"""
     
     # Header
-    st.markdown('<h1 class="main-header">Resume Screening System</h1>', unsafe_allow_html=True)
-    st.markdown('<p class="sub-header">Intelligent candidate matching powered by advanced algorithms</p>', unsafe_allow_html=True)
+    st.markdown('<h1 class="main-header">Haroon\'s Resume Scroring System</h1>', unsafe_allow_html=True)
+    st.markdown('<p class="sub-header">Matching resumes to job descriptions</p>', unsafe_allow_html=True)
     
     # Load components
     with st.spinner("Loading system components..."):
