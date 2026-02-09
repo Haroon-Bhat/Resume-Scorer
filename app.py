@@ -520,20 +520,44 @@ Preferred Skills:
                             # st.write(f"Keyword Match: {result['score']['keyword_score']:.1f}%")
 
 
-                            st.markdown("**Skills Matched**")
-                        if result['score']['matched_required_skills']:
-                            st.write(", ".join(result['score']['matched_required_skills']))
+                        # st.markdown("**Skills Matched**")
+                        # if result['score']['matched_required_skills']:
+                        #     st.write(", ".join(result['score']['matched_required_skills']))
+                        # else:
+                        #     st.write("No matching skills found")
+                        
+                        # st.markdown("**Skills Missing**")
+                        # if result['score']['missing_required_skills']:
+                        #     st.write(", ".join(result['score']['missing_required_skills']))
+                        # else:
+                        #     st.write("No missing skills")
+                        
+                        # # Download individual resume button
+                        # if 'file_object' in result['resume']:
+                        #     file_obj = result['resume']['file_object']
+                        #     st.download_button(
+                        #         label=f"Download Resume File",
+                        #         data=file_obj.getvalue(),
+                        #         file_name=resume_filename,
+                        #         mime="application/octet-stream",
+                        #         key=f"download_{idx}"
+                        #     )
+                        st.markdown("**Skills Matched**")
+                        matched_req = result.get('score', {}).get('matched_required_skills', [])
+                        if matched_req:
+                            st.write(", ".join(matched_req))
                         else:
                             st.write("No matching skills found")
-                        
+
                         st.markdown("**Skills Missing**")
-                        if result['score']['missing_required_skills']:
-                            st.write(", ".join(result['score']['missing_required_skills']))
+                        missing_req = result.get('score', {}).get('missing_required_skills', [])
+                        if missing_req:
+                            st.write(", ".join(missing_req))
                         else:
                             st.write("No missing skills")
-                        
+
                         # Download individual resume button
-                        if 'file_object' in result['resume']:
+                        if result.get('resume', {}).get('file_object'):
                             file_obj = result['resume']['file_object']
                             st.download_button(
                                 label=f"Download Resume File",
@@ -542,6 +566,7 @@ Preferred Skills:
                                 mime="application/octet-stream",
                                 key=f"download_{idx}"
                             )
+
 
 
 if __name__ == "__main__":
