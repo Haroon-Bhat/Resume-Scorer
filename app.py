@@ -500,11 +500,26 @@ Preferred Skills:
                         #     st.write(f"Experience Match: {result['score']['experience_score']:.1f}%")
                         #     st.write(f"Keyword Match: {result['score']['keyword_score']:.1f}%")
                         with col_detail2:
+                    
                             st.markdown("**Score Breakdown**")
-                            st.write(f"Required Skills Match: {result['score']['required_skills_score']:.1f}%")
-                            st.write(f"Preferred Skills Match: {result['score']['preferred_skills_score']:.1f}%")
-                            st.write(f"Experience Match: {result['score']['experience_score']:.1f}%")
-                            st.write(f"Keyword Match: {result['score']['keyword_score']:.1f}%")
+                            req_score = result['score'].get('required_skills_score', 0)
+                            pref_score = result['score'].get('preferred_skills_score', 0)
+                            exp_score = result['score'].get('experience_score', 0)
+                            keyword_score = result['score'].get('keyword_score', 0)
+                            
+                            st.write(f"Required Skills Match: {req_score:.1f}%")
+                            st.write(f"Preferred Skills Match: {pref_score:.1f}%")
+                            st.write(f"Experience Match: {exp_score:.1f}%")
+                            st.write(f"Keyword Match: {keyword_score:.1f}%")
+
+
+
+                            # st.write(f"Required Skills Match: {result['score']['required_skills_score']:.1f}%")
+                            # st.write(f"Preferred Skills Match: {result['score']['preferred_skills_score']:.1f}%")
+                            # st.write(f"Experience Match: {result['score']['experience_score']:.1f}%")
+                            # st.write(f"Keyword Match: {result['score']['keyword_score']:.1f}%")
+
+
                             st.markdown("**Skills Matched**")
                         if result['score']['matched_required_skills']:
                             st.write(", ".join(result['score']['matched_required_skills']))
